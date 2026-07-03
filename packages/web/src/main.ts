@@ -200,13 +200,18 @@ function renderComparison(c: ComparisonReport) {
   thead.appendChild(trH);
   heat.appendChild(thead);
   const tbody = el("tbody");
-  const maxVal = Math.max(0, ...c.heatmap.matrix_usd.flat());
+  // matrix_usd cells are `number | null`; null means "stage absent from this
+  // plan" (comparePlans encodes that deliberately). A null cell must render as
+  // "—", not crash on null.toFixed — which is exactly what happens when comparing
+  // plans with different stage sets, the heatmap's core use case.
+  const nums = c.heatmap.matrix_usd.flat().filter((x): x is number => x !== null);
+  const maxVal = Math.max(0, ...nums);
   for (let i = 0; i < c.heatmap.stage_ids.length; i++) {
     const tr = el("tr");
     tr.appendChild(el("th", { text: c.heatmap.stage_ids[i], attrs: { scope: "row" } }));
     for (const v of c.heatmap.matrix_usd[i]) {
-      const intensity = maxVal > 0 ? v / maxVal : 0;
-      const td = el("td", { text: `$${v.toFixed(4)}` });
+      const intensity = v !== null && maxVal > 0 ? v / maxVal : 0;
+      const td = el("td", { text: v === null ? "—" : `$${v.toFixed(4)}` });
       td.style.background = `rgba(29,78,216,${intensity.toFixed(2)})`;
       if (intensity > 0.5) td.style.color = "#fff";
       tr.appendChild(td);
@@ -300,16 +305,22 @@ function attachHandlers() {
     clearError("compare-errors");
     const raw = byId<HTMLTextAreaElement>("plans-input").value;
     const parsed = parsePlans(raw);
-    if (!parsed.ok) {
-      showError("compare-errors", `Parse error: ${parsed.error.message}`);
-      return;
-    }
-    if (parsed.value.length < 2) {
-      showError("compare-errors", "Need at least 2 plans to compare.");
+    // parsePlans returns { successes: Plan[]; failures: [...] } — NOT a Result.
+    // The old code read parsed.ok/.value/.error (all undefined), so `!parsed.ok`
+    // was always true and Compare short-circuited to "Parse error: undefined" for
+    // every input. It shipped because the web package had no typecheck step.
+    if (parsed.successes.length < 2) {
+      const firstFailure = parsed.failures[0]?.error?.message;
+      showError(
+        "compare-errors",
+        firstFailure
+          ? `Parse error: ${firstFailure}`
+          : "Need at least 2 valid plans to compare.",
+      );
       return;
     }
     try {
-      const c = comparePlans(parsed.value, { pricingDb: pricing });
+      const c = comparePlans(parsed.successes, { pricingDb: pricing });
       lastComparison = c;
       renderComparison(c);
     } catch (err) {
