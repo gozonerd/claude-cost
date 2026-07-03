@@ -21,7 +21,25 @@ function getLogPath(): string {
 }
 
 /**
+ * Serialized write chain.
+ *
+ * H6 hooks fire on Claude Code lifecycle events and their writes are wrapped in
+ * a wall-clock budget (see budget.ts): when a write exceeds its budget, the hook
+ * returns while the underlying fs.appendFile is still in flight. If the next hook
+ * (e.g. onPostToolUse) then appends concurrently, the two appends can land out of
+ * order and the JSONL log records a cost_actual line before its cost_estimate.
+ * Chaining every append through a single FIFO promise guarantees records are
+ * written in call order regardless of per-call timing. A rejected write is
+ * swallowed *for the chain only* (so one failure does not wedge all later writes);
+ * the caller still receives its own rejection and buffers per the H6 contract.
+ */
+let writeChain: Promise<void> = Promise.resolve();
+
+/**
  * writeRecord - Append a single record to the JSONL log
+ *
+ * Appends are serialized in call order via writeChain so concurrent hook
+ * invocations cannot interleave or reorder lines.
  *
  * @param record H6Record to write
  * @throws On file I/O errors (EACCES, ENOSPC, etc.)
@@ -30,5 +48,12 @@ export async function writeRecord(record: H6Record): Promise<void> {
   const path = getLogPath();
   const line = JSON.stringify(record) + "\n";
 
-  await fs.appendFile(path, line, "utf-8");
+  const doWrite = writeChain.then(() => fs.appendFile(path, line, "utf-8"));
+  // Keep the chain progressing even if this write rejects; the caller still
+  // awaits doWrite and sees the real error.
+  writeChain = doWrite.then(
+    () => undefined,
+    () => undefined,
+  );
+  await doWrite;
 }

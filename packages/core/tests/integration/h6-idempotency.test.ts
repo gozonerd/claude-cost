@@ -102,7 +102,7 @@ describe("H6 Idempotency", () => {
     const seenSize = getSeenSize();
     expect(seenSize).toBeLessThanOrEqual(1000);
     expect(seenSize).toBeGreaterThan(0);
-  });
+  }, 30000); // 100 real fs.appendFile round-trips; generous timeout for slow (e.g. AV-scanned Windows) filesystems
 
   it("cost_estimate and cost_actual are tracked separately", async () => {
     const ctx = {

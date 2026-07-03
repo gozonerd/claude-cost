@@ -14,7 +14,6 @@ import { getPricing, tryGetPricing, isStale, loadPricing } from "../pricing/inde
 import { planId } from "../util/plan-id.js";
 import { computeEnvelope } from "./envelope.js";
 import { effectiveInputTokens, validatePlanSchema } from "./carry-context.js";
-import { readFileSync } from "node:fs";
 
 const PER_MTOK = 1_000_000;
 
@@ -298,34 +297,23 @@ function uniqueStageIds(plans: Plan[]): string[] {
  * Post-run variance analysis. Implements FR-07.
  */
 /**
- * Parse H6 log from string path or return array as-is.
+ * Normalize an optional array of H6 cost-actual records to a concrete array.
+ *
+ * The core engine is browser-safe ("pure client-side; no backend") and therefore
+ * accepts already-parsed records only. Reading an H6 log file *by path* is a
+ * Node-only concern that belongs in the CLI (which may read the file and pass the
+ * parsed records here); keeping it out of the engine avoids a static `node:fs`
+ * import that breaks the browser bundle.
  */
-function parseH6Log(h6Log: H6CostActualRecord[] | string | undefined): H6CostActualRecord[] {
-  if (!h6Log) return [];
-  if (typeof h6Log === "string") {
-    try {
-      const content = readFileSync(h6Log, "utf-8");
-      const records: H6CostActualRecord[] = [];
-      for (const line of content.trim().split("\n")) {
-        if (!line.trim()) continue;
-        const rec = JSON.parse(line);
-        if (rec.kind === "cost_actual") {
-          records.push(rec as H6CostActualRecord);
-        }
-      }
-      return records;
-    } catch {
-      return [];
-    }
-  }
-  return h6Log;
+function parseH6Log(h6Log: H6CostActualRecord[] | undefined): H6CostActualRecord[] {
+  return h6Log ?? [];
 }
 
 export function analyzeVariance(
   plan: Plan,
   log: ExecutionLog,
   opts: EstimateOptions = {},
-  h6Log?: H6CostActualRecord[] | string,
+  h6Log?: H6CostActualRecord[],
 ): VarianceReport {
   const db = loadPricing(opts.pricingDb);
   const estimate = estimatePlan(plan, opts);
