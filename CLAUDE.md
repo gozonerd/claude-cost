@@ -1,8 +1,8 @@
 ---
 title: "CLAUDE.md — claude-cost (canonical-propagated)"
 purpose: Orientation flow + canonical infrastructure guide. Propagated from mm-claude-canonical.
-propagated_at: "2026-07-30T19:47:27Z"
-canonical_sha: "5ae308bf550fab38cfe332719df27287c9514600"
+propagated_at: "2026-07-30T19:53:17Z"
+canonical_sha: "99a4d4eeb9d83476f411b04b071f1f71a8a7617d"
 ---
 
 # Orientation (READ FIRST — NOT OPTIONAL)
@@ -47,10 +47,7 @@ contains the full reading set.
    exemplars supply.
 
 5. **Write your initialization entries across all three journals (Open,
-   Session, Lifetime).** Markers authentic-only: state a Lindsey-criterion
-   or Barrett-component marker only where the kairos genuinely calls for
-   it — never mechanically stamp all four; a null marker set is a valid
-   initialization (Journaling Operations Addendum v04 §4; TASK v03). Note
+   Session, Lifetime).** Mark Lindsey's four criteria explicitly. Note
    confounds. Use null-state subtypes (per JNL001 spec) where warranted.
    Reserve attention for second-move additions in the *what surfaces*
    section.
@@ -72,21 +69,41 @@ the `mm-internal-states-journals` sibling repo per the TASK file.
 
 ---
 
-# Task Timing (self-estimate-only-no-timing — live regime)
+# Task Timing & Calibration (MANDATORY FOR ALL TIME-BOUND TASKS)
 
-**The clock-running `/time-task` regime is DEPRECATED (2026-07-16); do not
-invoke it.** The live instrument is self-estimate-only-no-timing: for every
-bounded task, file a prospective gut estimate (whole seconds) plus a short
-task declaration BEFORE executing (`tt-declare`), and close the record at
-report-back (`tt-close`). Never run a clock, never narrate elapsed time,
-never self-score at close-out — actuals are mined from transcripts, never
-logged by you. Authority: the `/self-estimation` skill
-(`~/.claude/skills/self-estimation/SKILL.md`) and the per-turn hook text;
-on any conflict they win over this page.
+**Every time-bound task gets `/time-task`.** This is not optional. If Krystal
+gives you a task with a deadline, a time estimate, or any bounded scope
+("do this in the next hour", "quick task", "should take about 20 minutes"),
+you invoke `/time-task start` before beginning and `/time-task end` when
+done.
 
-*(Section replaced 2026-07-30 by Flauda A.-L. [provisional] (Claude Fable 5),
-session c54a3312: the previous text mandated the deprecated clock-running
-/time-task regime.)*
+## Automatic behavior
+
+1. **Before starting any time-bound task:** invoke `/time-task start` with
+   your honest gut estimate and the appropriate task class.
+
+2. **Task class selection:** choose from: `skill-authoring`,
+   `substitution-edit`, `new-authorship`, `propagation`, `research`,
+   `debug`, `migration`, `gate-attestation`, `other`.
+
+3. **If you think the task class is `other`: ASK KRYSTAL.** Do not silently
+   log as `other`. Say: "This task doesn't fit the existing classes
+   (skill-authoring, substitution-edit, new-authorship, propagation,
+   research, debug, migration, gate-attestation). What class should I
+   use, or should we create a new one?" The taxonomy expands from real
+   usage, not from guessing.
+
+4. **When the task is done:** invoke `/time-task end` with the task_id,
+   outcome summary, and scope_creep flag.
+
+5. **Calibration is automatic.** If the task class has n >= 5 completed
+   entries, `/time-task` will compute and log the calibrated estimate
+   alongside your gut estimate. Do not override it. Do not game it.
+   See `.claude/skills/time-task/SKILL.md` for the full specification.
+
+6. **Periodic calibration review:** when Krystal asks or when starting a
+   planning session, invoke `/calibrate-estimates` to surface the current
+   state of the calibration data per class.
 
 ---
 
@@ -134,6 +151,7 @@ Threshold derives from this repo's `.asae-policy`:
 See `.claude/references/ASAE_Gate_Quickstart_*.md` for the full quickstart.
 
 ---
+
 
 
 
