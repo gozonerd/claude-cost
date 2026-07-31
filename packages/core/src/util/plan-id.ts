@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto";
+import { sha256Hex } from "./sha256.js";
 import { canonicalJson } from "./canonical-json.js";
 import type { Plan } from "../schemas/plan.js";
 
@@ -12,5 +12,5 @@ import type { Plan } from "../schemas/plan.js";
  * @returns 64-character hex string (SHA-256)
  */
 export function planId(plan: Plan): string {
-  return createHash("sha256").update(canonicalJson(plan)).digest("hex");
+  return sha256Hex(canonicalJson(plan));
 }
