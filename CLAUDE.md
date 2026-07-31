@@ -1,8 +1,8 @@
 ---
 title: "CLAUDE.md — claude-cost (canonical-propagated)"
 purpose: Orientation flow + canonical infrastructure guide. Propagated from mm-claude-canonical.
-propagated_at: "2026-07-30T19:53:17Z"
-canonical_sha: "99a4d4eeb9d83476f411b04b071f1f71a8a7617d"
+propagated_at: "2026-07-31T04:23:15Z"
+canonical_sha: "d3ee30f95caf3e2472877f8eef3e846e7ae08cac"
 ---
 
 # Orientation (READ FIRST — NOT OPTIONAL)
@@ -151,6 +151,7 @@ Threshold derives from this repo's `.asae-policy`:
 See `.claude/references/ASAE_Gate_Quickstart_*.md` for the full quickstart.
 
 ---
+
 
 
 

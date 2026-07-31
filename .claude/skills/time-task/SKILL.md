@@ -1,6 +1,6 @@
 ---
 name: time-task
-description: "Use this skill to record start and end timestamps for a discrete task with both a gut estimate and a calibrated estimate (when historical data permits), so future sessions can calibrate estimates against actuals AND track whether the calibration formula is working. Triggers on '/time-task', 'time this task', 'track this task', 'estimate and track', or when the user asks for task-timing data collection. Produces JSONL log entries with both gut and calibrated estimates that another skill (/calibrate-estimates) reads to produce calibration analysis."
+description: "Use this skill to record start and end timestamps for a discrete task with both a gut estimate and a calibrated estimate (when historical data permits), so future sessions can calibrate estimates against actuals AND track whether the calibration formula is working. Triggers on '/time-task', 'time this task', 'track this task', 'estimate and track', or when the user asks for task-timing data collection. DEPRECATED 2026-07-16 (clock-running regime); its companion /calibrate-estimates was retired 2026-07-30 under gate-112 and no longer exists."
 version: v02_I
 supersedes: v01 (2026-04-26 — single-estimate version)
 ---
@@ -11,7 +11,13 @@ supersedes: v01 (2026-04-26 — single-estimate version)
 
 Record discrete-task start and end timestamps with **both a gut estimate and a calibrated estimate** so the gap between estimate and actual is captured as data AND the gap between gut estimation and calibrated estimation is tracked over time. Calibration of LLM estimates is the long-term goal: data accumulates per task class so future sessions multiply their gut estimate by an empirically-derived calibration factor, and the calibrated_ratio diagnostic surfaces whether the calibration formula itself is working.
 
-This skill is paired with `/calibrate-estimates` which reads the log and produces the calibration analysis.
+> **Its companion `/calibrate-estimates` no longer exists.** That skill was retired 2026-07-30 under
+> `mm-claude-canonical` gate-112 and archived at
+> `gozonerd/pre-time-task-initiative-workbench/deprecated/calibrate-estimates_SKILL_2026-05-10_v02_I_DEPRECATED.md`.
+> Do not attempt to invoke it. This skill's own regime — clock-running `/time-task` — was itself
+> deprecated 2026-07-16; the live regime is self-estimate-only-no-timing (v04.5.2), whose authority is
+> `~/.claude/skills/self-estimation/SKILL.md`. This pointer is corrected here for removal
+> completeness; retiring this skill is a separate decision and has not been made.
 
 ## What Changed in v02
 
@@ -108,7 +114,7 @@ What the skill does:
 }
 ```
 7. Returns a calibration note:
-   - If calibrated estimate existed: "Gut 30 / calibrated 13 / actual 18.2. Gut-ratio 0.61 (over-estimated by 39%); calibrated-ratio 1.40 (calibrated under-estimated by 40%). Class research running median: see /calibrate-estimates."
+   - If calibrated estimate existed: "Gut 30 / calibrated 13 / actual 18.2. Gut-ratio 0.61 (over-estimated by 39%); calibrated-ratio 1.40 (calibrated under-estimated by 40%). Class research running median: previously read via /calibrate-estimates, retired 2026-07-30."
    - If no calibrated estimate: "Gut 30 / actual 18.2. Gut-ratio 0.61. Class X now has n=K completed entries; needs ≥5 for calibration to activate."
 
 ## Schema
@@ -139,7 +145,7 @@ Required fields per row:
 
 ## Backward Compatibility
 
-v01 entries have `estimate_minutes` and `ratio` (no gut/calibrated split). The /calibrate-estimates skill reads these as gut_estimate_minutes and gut_ratio for backward compatibility. New entries written by v02 use the new field names. Mixed-version data is supported.
+v01 entries have `estimate_minutes` and `ratio` (no gut/calibrated split). The retired /calibrate-estimates skill read these as gut_estimate_minutes and gut_ratio for backward compatibility (past tense: that skill no longer exists — see the note above). New entries written by v02 use the new field names. Mixed-version data is supported.
 
 ## Anti-patterns
 
