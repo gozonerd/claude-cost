@@ -128,7 +128,7 @@ user: krystal
 
 ## User
 
-- [Methodology naming canonical](user_methodology_naming_canonical.md) — ASAE = AI Self Audit Edit; D2R = Dare to Rise family; don't invent etymologies
+- [Methodology naming canonical](user_methodology_naming_canonical.md) — ASAE = Audit. Substantiate. Adjudicate. Edit. (2026-08-05 ruling; formerly AI Self Audit Edit); D2R = Dare to Rise family; don't invent etymologies
 - [Biological-NN schema advantage](user_neural_network_schema_advantage.md) — Kandel-line neuroscience training, not CS/ML; treat her claims as first-source reasoning
 - [Krystal Martinez — user profile](user_krystal.md) — role, working style, ADHD accommodations, Cody, AI-first company context
 - [Krystal — researcher profile](user_krystal_researcher.md) — academic background, research lens, how she approaches AI cognition research

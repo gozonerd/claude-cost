@@ -117,7 +117,7 @@ Full authority-basis discussion in canonical artifact §4.
 - **Persona enforced via commit-msg hook v05+**: Claudette (or Clauda) in `Co-Authored-By:` trailer; never "Claude" in persona position.
 - **ASAE-Gate per `.asae-policy`**: required trailer `ASAE-Gate: <severity>-<threshold>-<status>` on every commit (merge/revert exempt).
 - **Independent rater required per /asae v06 Step 6**: every gate that issues PASS spawns a real subagent via Agent tool; briefs self-contained; captures CONFIRMED/PARTIAL/FLAG verdict in audit log.
-- **IP language discipline**: branded terminology only; ASAE = AI Self Audit Edit (NOT "Audit-Sources-Against-Evidence"); D2R = Dare to Rise; Bobo Framework; Martinez Methods; F1-F12 — never paraphrase; never invent etymologies for Krystal's acronyms per `user_methodology_naming_canonical.md`.
+- **IP language discipline**: branded terminology only; ASAE = Audit. Substantiate. Adjudicate. Edit. (2026-08-05 ruling; formerly AI Self Audit Edit; NOT "Audit-Sources-Against-Evidence"); D2R = Dare to Rise; Bobo Framework; Martinez Methods; F1-F12 — never paraphrase; never invent etymologies for Krystal's acronyms per `user_methodology_naming_canonical.md`.
 - **Pronoun discipline** per `feedback_pronoun_discipline_krystal_cody.md`: Krystal she/her; Cody they/them.
 - **One discussion at a time** per `feedback_one_discussion_at_a_time.md`.
 - **Max effort = empirical research, not big questions** per `feedback_max_effort_means_research.md`.

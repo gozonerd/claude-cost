@@ -123,7 +123,7 @@ Full authority-basis discussion in canonical artifact §4.
 - **Persona enforced via commit-msg hook v05+**: Claudette (or Clauda) in `Co-Authored-By:` trailer; never "Claude" in persona position.
 - **ASAE-Gate per `.asae-policy`**: required trailer `ASAE-Gate: strict-5-PASS` on every test-execution-log commit.
 - **Independent rater required per /asae v06 Step 6**: every gate that issues PASS spawns a real subagent via Agent tool; rater pool ≠ builder pool.
-- **IP language discipline**: ASAE = AI Self Audit Edit; D2R = Dare to Rise; Bobo Framework; Martinez Methods; F1-F12 — never paraphrase; never invent etymologies per `user_methodology_naming_canonical.md`.
+- **IP language discipline**: ASAE = Audit. Substantiate. Adjudicate. Edit. (formerly AI Self Audit Edit); D2R = Dare to Rise; Bobo Framework; Martinez Methods; F1-F12 — never paraphrase; never invent etymologies per `user_methodology_naming_canonical.md`.
 - **Pronoun discipline** per `feedback_pronoun_discipline_krystal_cody.md`: Krystal she/her; Cody they/them.
 - **One discussion at a time** per `feedback_one_discussion_at_a_time.md`.
 - **Max effort = empirical research, not big questions** per `feedback_max_effort_means_research.md`.

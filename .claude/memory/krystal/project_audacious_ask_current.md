@@ -6,7 +6,7 @@ originSessionId: bccded33-1915-42a5-8734-1be147b28f3c
 ---
 ## Core IP
 
-ASAE (AI Self-Audit-Edit) — addresses IBM MAST paper finding that 38% of AI agentic pipeline failures are output formatting errors. ASAE conservatively reduces this failure class by 30%. Net impact: ~12.5% of total pipeline failures eliminated. Anthropic revenue impact: $150M-$600M annualized on ~$30B run rate.
+ASAE (Audit. Substantiate. Adjudicate. Edit.) — addresses IBM MAST paper finding that 38% of AI agentic pipeline failures are output formatting errors. ASAE conservatively reduces this failure class by 30%. Net impact: ~12.5% of total pipeline failures eliminated. Anthropic revenue impact: $150M-$600M annualized on ~$30B run rate.
 
 ## Tiered Pitch Structure
 

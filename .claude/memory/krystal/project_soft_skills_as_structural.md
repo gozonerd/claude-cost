@@ -16,7 +16,7 @@ NOT error correction (that's quality control). This is hearing "you're not good 
 
 ### 3. Systematizing
 
-The meta-skill behind everything. Correction-to-rule pipeline = systematized learning. Adoption framework = systematized change management. LE Generator = systematized curriculum. DPO = systematized document production. TEROS = systematized context management. Self-audit-edit skill origin: Krystal wrote playbooks for Cody to execute, Cody got tripped up by Sonnet typos, Krystal built a structural intervention so the failure class couldn't recur.
+The meta-skill behind everything. Correction-to-rule pipeline = systematized learning. Adoption framework = systematized change management. LE Generator = systematized curriculum. DPO = systematized document production. TEROS = systematized context management. Self-audit-edit (the original name of what is now ASAE — Audit. Substantiate. Adjudicate. Edit.; renamed per Krystal's 2026-08-05 ruling) skill origin: Krystal wrote playbooks for Cody to execute, Cody got tripped up by Sonnet typos, Krystal built a structural intervention so the failure class couldn't recur.
 
 ## Portfolio Principle
 

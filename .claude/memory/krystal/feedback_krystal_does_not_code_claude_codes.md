@@ -54,7 +54,7 @@ This framing is correct. It's NOT a credentialing-down move; it's the accurate d
 
 `mm-d2r-code-plan-stack` (Martinez Methods SSOT repo at `C:/Users/NerdyKrystal/martinez-methods/mm-d2r-code-plan-stack/`) is the methodology bundle Krystal designed/architected for AI-orchestrated software design + build:
 
-- `/asae` (AI Self Audit Edit) — core audit-and-correct loop
+- `/asae` (Audit. Substantiate. Adjudicate. Edit.) — core audit-and-correct loop
 - `/ideate-to-d2r-ready` — ideation-to-actionable-spec workflow (Phase 00: 17-question interrogation)
 - `/dare-to-rise-code-plan` — multi-stage gated code-plan workflow (Stage 00 four-track research → ASAE gate → Stage 01 QA-designed-first plan authorship → ASAE gate → each implementation stage → ASAE gate)
 - **Six prerequisite documents required before any code is written:**
