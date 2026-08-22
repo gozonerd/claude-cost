@@ -91,27 +91,3 @@ For instruction blocks embedded in documents:
 ## Reference
 
 For full versioning rules including all edge cases, see `references/versioning-rules-full.md`.
-
-## Before You Version: Is This Even a Version-Up Document?
-
-**Ask one question before applying anything above:**
-
-> *Is this file a record of WHAT HAPPENED, or a statement of WHAT CURRENTLY IS?*
-
-- **Record of what happened** — gate log, decision log, adjudication log, rater audit log,
-  change log, journal, sealed manifest, provenance ledger → **APPEND ONLY, literally.**
-  Do NOT version it. Never edit an entry. A correction is a NEW entry naming the entry it
-  corrects. Versioning one of these breaks the unbroken sequence it exists to provide.
-- **Statement of what currently is** — rule, spec, quickstart, flash start, glossary, skill,
-  README, paper → **VERSION UP**, per every rule in this skill. Never edit the live copy for
-  a significant change: retire it unedited to `deprecated/` and write the improved copy at
-  the next version.
-
-**The mechanical tell that a version-up is overdue:** the document has grown an amendments
-section. An amendment inside a live artifact is a version bump that was not taken.
-
-**Full reference:** `references/versioning-rules-full.md` §S4 — Krystal Martinez's ruling
-verbatim, the boundary cases, and the named specimens.
-
-*This skill's pre-v04 state is preserved unedited at `deprecated/SKILL.md` in this same skill
-directory — moved, not renamed, per step 5 above. That is the superseded copy of this skill.*
