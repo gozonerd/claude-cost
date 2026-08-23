@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
   "canonical_repo": "Martinez-Methods/mm-claude-canonical",
-  "canonical_sha": "30e30203159f72fd0a2acd0b500d9f0ddec688ae",
+  "canonical_sha": "b0de70ac0f6a4ff2526f51c1def5c34c0b919a1f",
   "d2r_repo": "Martinez-Methods/mm-d2r-code-plan-stack",
   "d2r_sha": "6c2a30ea92bc608f8c876b62a65b8fdbd024f938",
-  "propagated_at": "2026-08-22T23:22:13Z",
+  "propagated_at": "2026-08-23T16:27:28Z",
   "tier": "full",
   "skills_propagated": ["app-update-rec", "asae-render", "asae", "author-role-definition", "author-role-lockin-skill", "author-role-manifest", "author-role-propagation-script", "best-practices-reading-journal", "bpmn-ai-orchestration", "brainstorm-cover-letter", "check-jd", "create-database", "dare-to-rise-code-plan", "decide-one-at-a-time", "define-your-role-literal", "diagram-pack", "file-presentation", "file-versioning", "graphviz-ai-orchestration", "html-interactive-ai-orchestration", "ideate-to-d2r-ready", "krystal-draft", "le-prompt-brief", "mermaid-ai-orchestration", "new-repo", "no-man", "onboarding-trial", "plantuml-ai-orchestration", "present-and-defend", "print-docx", "print-from-html", "print-to-html-to-edit", "quick-progress-check", "rebrand-sweep", "reinforced-fenced-block", "role-definition-calibration-inevitability", "role-definition-convergence-genius", "role-definition-empirical-inevitability", "role-definition-engagement-genius", "role-definition-excellence-inevitability", "role-definition-floor-inevitability", "role-definition-gnmu-architect-genius", "role-definition-inspectable-inevitability", "role-definition-provenance-expositor", "role-definition-reliability-compositor", "role-definition-serene-knuth", "role-definition-spec-genius", "role-definition-substrate-witness-genius", "role-definition-value-genius", "run-parallel-threads", "scope-recap", "super-reinforced-fenced-block", "time-task", "unified-deep-research", "update-backlog", "upgrade-bundle", "walk-me-through", "write-avd", "write-prd", "write-pscad", "write-tqvcd", "write-trd", "zipped skills"],
   "skills_skipped_local": ["claudette-the-code-debugger", "write-uxd"],
