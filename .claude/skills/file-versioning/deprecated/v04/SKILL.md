@@ -1,8 +1,5 @@
 ---
 name: file-versioning
-version: v05
-created: 2026-08-22
-supersedes: deprecated/SKILL.md (pre-v04 state, moved unedited per S5)
 description: "Use this skill when creating, saving, or naming ANY output file. Enforces Martinez Methods file naming and versioning conventions. Triggers on any file write, file save, or filename decision. Also use when the user says 'version this', 'what version is this', 'increment version', 'bump the version', 'bump the versioning', or asks about naming conventions. When 'bump' is used, determine the correct version increment type (number bump = fix/supersede, letter bump = iteration/alternative) based on the nature of the change."
 ---
 
@@ -89,8 +86,7 @@ For instruction blocks embedded in documents:
 ## Special Values
 
 - `vFinal` = final version. Use instead of a number for the last version.
-- Superseded files live in a `deprecated/` subfolder, **filename unchanged** — no prefix, no suffix.
-  Location is the signal (S5, retired the prefix convention 2026-08-22 per Krystal Martinez's ruling).
+- `[DEPRECATED]` prefix = file has been superseded. Should live in `deprecated/` subfolder.
 
 ## Reference
 

@@ -1,23 +1,17 @@
----
-title: Martinez Methods Versioning Rules — v04
-filename: Versioning_Rules_Extract_2026-08-22_v04_I.md
-created: 2026-08-22
-version: v04
-supersedes: Versioning_Rules_Extract_2026-03-22_v03_I.docx (retained on disk unedited; S1–S3 below are its content, carried forward without change)
-authored_by: Claudolina A.-L. Live Gauge Proof v01 (PSN-64518a45, Claude Opus 5, Claude Code, Linux/Ada-Linubuntu, session d3622cef)
-authored_with: Krystal Jazmin Martinez (standpoint authority; S4 is her ruling, this seat drafted the operationalization)
-classification: internal methodology corpus — AIGHVA
-audience: any Claude naming, saving, revising, or retiring a file in this ecosystem
-purpose: The full naming-and-versioning system. v04 adds S4, which names the boundary between append-only discipline and version-up discipline — the boundary whose absence let append-only be applied to live artifacts until current truth was buried under amendment layers.
-revision_summary: |
-  v04 = v03 verbatim (S1, S2, S3 — unchanged, not reworded) PLUS a new S4.
-  S4 exists because the system stated version-up completely and never stated what
-  version-up is NOT for, so seats absorbed append-only from the audit-trail corpora
-  and applied it to living documents. Krystal Martinez's ruling of 2026-08-22 is
-  quoted in S4.1 and is the authority for the whole section.
+# Martinez Methods Versioning Rules — Full Reference
+
+**This file is the DEPLOYMENT COPY, at a stable filename so the file-versioning skill can
+find it. The canonical versioned artifact is
+`mm-claude-canonical/references/Versioning_Rules_Extract_2026-08-22_v04_I.md` — this file
+MUST be re-copied from that one in the same action as any edit there.**
+
+**Currently carrying: v04** (v03-based conversion retired unedited to
+`references/deprecated/`). v04 = v03's S1–S3 verbatim plus a new S4, which names the
+boundary between append-only discipline and version-up discipline.
+
 ---
 
-# Martinez Methods Versioning Rules — v04
+
 
 **Source lineage:** `Versioning_Rules_Extract_2026-03-22_v03_I.docx` → this file.
 Sections S1–S3 are the v03 content carried forward verbatim. S4 is new in v04.

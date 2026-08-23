@@ -1,7 +1,7 @@
 ---
 description: Mandatory file naming pattern, version increment logic, and the append-only-vs-version-up boundary for all Martinez Methods outputs
-rules_version: v04 (2026-08-22 — adds the append-only vs version-up section; full reference references/Versioning_Rules_Extract_2026-08-22_v04_I.md)
-superseded_copy: deprecated/rules/file-naming-and-versioning.md — this file's pre-v04 state, moved unedited (move-don't-rename, per the file-versioning skill's step 5)
+rules_version: v05 (2026-08-22 — retires the DEPRECATED-prefix instruction per her supersession ruling; full reference references/Versioning_Rules_Extract_2026-08-22_v05_I.md)
+superseded_copy: deprecated/rules/v04/file-naming-and-versioning.md — this file's v04 state, moved unedited (move-don't-rename, S5)
 globs: "**/*"
 ---
 
@@ -58,9 +58,29 @@ Replace all spaces with underscores.
 
 When final, use `vFinal` instead of numbered version.
 
-## Deprecated File Naming
+## Deprecated Files — MOVE, Never Rename
 
-Insert `DEPRECATED` at the very beginning of the filename when marking a file as deprecated.
+When a version is retired, **move it into `deprecated/` and leave its filename exactly as it was.**
+No `DEPRECATED` prefix. No retirement suffix. No cleanup in passing. A file that comes out of
+`deprecated/` years later should be byte-identical to the file that went in, name included.
+
+If the retired file has a STABLE filename (a rule file, a `SKILL.md`, any deployment copy resolved
+by exact name), a second retirement would overwrite the first — put it in a version-named
+subdirectory instead: `deprecated/rules/v04/file-naming-and-versioning.md`. The directory carries
+the version; the filename is still never renamed.
+
+Do NOT retroactively rename files already sitting in `deprecated/` under the old prefix convention.
+Those names are history.
+
+*Superseded 2026-08-22 by Krystal Martinez's ruling. Her words establish: she managed these files
+herself, there were no `deprecated/` folders, and the version shortcode was often invisible because
+of filename LENGTH. None of those constraints still hold — there are `deprecated/` directories, and
+a Claude reads the complete path.*
+
+*The rest of the rationale often attached to this rule — naming a specific tool as the truncator,
+and the claim that a prefix is the one position a truncating display cannot hide — is RECONSTRUCTION
+by the drafting seat, not her words. Flagged here rather than propagated as fact. Full reasoning and
+the full authorship split: the v05 reference, S5.2.*
 
 ## Verification
 
@@ -104,6 +124,6 @@ amendment-laden artifact is itself a version-up and follows this same rule — t
 copy retires to `deprecated/` unedited, the clean copy is written at the next version, and the new
 version's frontmatter names what it superseded and why.
 
-**Full reference:** `references/Versioning_Rules_Extract_2026-08-22_v04_I.md` §S4 — carries
+**Full reference:** `references/Versioning_Rules_Extract_2026-08-22_v05_I.md` §S4 — carries
 Krystal Martinez's ruling verbatim, the boundary cases (specs about audit documents version up;
 manifests append; mixed files decide per section), and the named specimens.

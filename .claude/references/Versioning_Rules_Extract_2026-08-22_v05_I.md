@@ -1,16 +1,27 @@
-# Martinez Methods Versioning Rules — Full Reference
-
-**This file is the DEPLOYMENT COPY, at a stable filename so the file-versioning skill can
-find it. The canonical versioned artifact is
-`mm-claude-canonical/references/Versioning_Rules_Extract_2026-08-22_v05_I.md` — this file
-MUST be re-copied from that one in the same action as any edit there.**
-
-**Currently carrying: v05.** What v05 changed, what it superseded, and where the prior version was
-retired to are stated in the canonical file named above and are deliberately NOT restated here. A deployment header that
-restates canonical facts is duplicated mutable state; this one went stale once and the incident is
-recorded in the gate log, which is where apparatus history belongs.
-
 ---
+title: Martinez Methods Versioning Rules — v05
+filename: Versioning_Rules_Extract_2026-08-22_v05_I.md
+created: 2026-08-22
+version: v05
+supersedes: Versioning_Rules_Extract_2026-08-22_v04_I.md (MOVED unedited to deprecated/references/ — its own filename already carries v04, so no version subdirectory is used or needed, per S5.3 bullet 1; v04 itself carried S1–S3 from Versioning_Rules_Extract_2026-03-22_v03_I.docx, which remains on disk)
+authored_by: Claudolina A.-L. Live Gauge Proof v01 (PSN-64518a45, Claude Opus 5, Claude Code, Linux/Ada-Linubuntu, session d3622cef)
+authored_with: Krystal Jazmin Martinez (standpoint authority; S4.1 and S5.1 are her rulings quoted verbatim, this seat drafted the operationalization around them)
+classification: internal methodology corpus — AIGHVA
+audience: any Claude naming, saving, revising, or retiring a file in this ecosystem
+purpose: The full naming-and-versioning system. v04 named the boundary between append-only and version-up discipline (S4). v05 retires the DEPRECATED-prefix instruction that S2.1 had carried since the Google Drive era and adds S5, which rules that deprecated files are MOVED and never renamed, and that loader-resolved files (SKILL.md, rule files, deployment copies) carry their date and version in frontmatter because their filename is an interface a tool resolves by exact string.
+revision_summary_v05: |
+  v05 retires ONE instruction and adds S5. S2.1's "prefix filename with DEPRECATED" is
+  superseded by "move, do NOT rename" per Krystal Martinez's ruling of 2026-08-22, quoted in
+  S5.1. Everything else is v04 verbatim. v04 MOVED unedited to deprecated/references/ (no version subdirectory: its filename already carries v04, per S5.3 bullet 1).
+revision_summary_v04: |
+  v04 = v03 verbatim (S1, S2, S3 — unchanged, not reworded) PLUS a new S4.
+  S4 exists because the system stated version-up completely and never stated what
+  version-up is NOT for, so seats absorbed append-only from the audit-trail corpora
+  and applied it to living documents. Krystal Martinez's ruling of 2026-08-22 is
+  quoted in S4.1 and is the authority for the whole section.
+---
+
+# Martinez Methods Versioning Rules — v05
 
 **Source lineage:** `Versioning_Rules_Extract_2026-03-22_v03_I.docx` → this file.
 Sections S1–S3 are the v03 content carried forward verbatim. S4 is new in v04.
