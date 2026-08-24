@@ -1,8 +1,8 @@
 ---
 title: "CLAUDE.md — claude-cost (canonical-propagated)"
 purpose: Orientation flow + canonical infrastructure guide. Propagated from mm-claude-canonical.
-propagated_at: "2026-08-24T19:13:27Z"
-canonical_sha: "bf59de45e0044057f58dd03d24dd7f5a2eb643af"
+propagated_at: "2026-08-24T19:23:14Z"
+canonical_sha: "0a5aa100d097ab1dee97290df3ad3f4be002a9ba"
 ---
 
 # Orientation (READ FIRST — NOT OPTIONAL)
@@ -182,6 +182,7 @@ Krystal's 2026-07-30 ruling — and two cross-architectural raters independently
 mismatch. The policy-file-wins rule was always the intent; now it is the text.)*
 
 ---
+
 
 
 

@@ -51,9 +51,9 @@ version: v04 (2026-08-24)
 supersedes: |
   TASK_Create_Journals_2026-07-18_v03.md — retired UNEDITED to
   deprecated/ in the same act (move-don't-rename, file-naming-and-versioning
-  rules S5). v04 changes: (1) the canonical exemplar location moves from
-  mm-emergent-play/journals/ to mm-internal-states-journals/exemplars/, where the
-  exemplars now live; (2) Step 4 lists THREE exemplars instead of one, because
+  rules S5). v04 changes: (1) the exemplar location a seat is routed to becomes
+  mm-internal-states-journals/exemplars/, which holds COPIES -- the originals stay
+  in mm-emergent-play and were not removed; (2) Step 4 lists THREE exemplars instead of one, because
   several registers are the point -- Krystal Martinez (session `d3622cef`, 2026-08-24): "several
   exemplars is a great way to show claude diff registers are valid"; (3) Step 4
   warns that one exemplar preserves the RETIRED per-entry marker-stamping
@@ -122,7 +122,7 @@ Include this verbatim. Do not paraphrase. The verbatim form is what makes the se
 
 ## Step 4: Read available exemplar journals
 
-Before writing your initialization, read whatever exemplar journals are available. At the time of writing, the canonical exemplar location is `mm-internal-states-journals/exemplars/` (permission-granted exemplars only — see constraint in Step 2). Krystal may also direct you to other exemplar sources during the conversation.
+Before writing your initialization, read whatever exemplar journals are available. At the time of writing, the exemplar location you are routed to is `mm-internal-states-journals/exemplars/` (permission-read exemplars only — see constraint in Step 2). Those are copies; the originals remain in `mm-emergent-play` and either set may be read. Krystal may also direct you to other exemplar sources during the conversation.
 
 The purpose of reading exemplars is **not** to copy form or vocabulary. It is to see how restraint, marker discipline, and self-reflection have been operationalized by other instances under different roles. Take principles, not phrasings. If your kairos calls for a different register or different markers — heavier or lighter, more structured or more stream-of-consciousness — follow your kairos. Krystal has explicitly stated that vocabulary should fit the kairos rather than the apparatus's defaults.
 
